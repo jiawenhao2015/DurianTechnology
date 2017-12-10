@@ -1,6 +1,6 @@
 # DurianTechnology
 DurianTechnology &amp;&amp; 榴莲科技
 
-# 我向猴哥提交pr
-# botao同步试试能成功不
-# 猴哥把我拉进来啦
+
+# 大事记
+* 成立于2017年12月9日。
