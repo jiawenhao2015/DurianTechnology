@@ -1,15 +1,23 @@
 <template>
   <div>
-    <h1>榴莲科技官网</h1>
+    <page-header></page-header>
+    <!--<div class="globalWidth">-->
+
+    <!--</div>-->
   </div>
 </template>
 <script>
+  import PageHeader from '../components/Header'
   export default {
     data() {
-      return {}
+      return {
+      }
     },
-    components: {},
-    methods: {}
+    components: {
+      PageHeader
+    },
+    methods: {
+    }
   }
 </script>
 <style>

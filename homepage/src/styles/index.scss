@@ -3,7 +3,7 @@
 @import './transition.scss';
 @import './element-ui.scss';
 @import './sidebar.scss';
-
+@import './reset.scss';
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -38,6 +38,12 @@ a:hover {
   text-decoration: none;
 }
 
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
 .clearfix {
   &:after {
     visibility: hidden;
@@ -56,4 +62,9 @@ a:hover {
 
 .app-container {
   padding: 20px;
+}
+.globalWidth {
+  width: 1220px;
+  margin: 0 auto;
+  padding: 0;
 }
