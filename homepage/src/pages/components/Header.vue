@@ -11,6 +11,19 @@
           <li class="nav-item"><a href="#">关于我们</a></li>
           <li class="nav-item"><a href="#">联系我们</a></li>
         </ul>
+        <div class="dropdown">
+          <el-dropdown trigger="click">
+            <span class="el-dropdown-link">
+              <svg-icon icon-class="menu" style="font-size: 20px;"></svg-icon>
+            </span>
+            <el-dropdown-menu slot="dropdown">
+              <el-dropdown-item><a href="#">首页</a></el-dropdown-item>
+              <el-dropdown-item><a href="#">业务范围</a></el-dropdown-item>
+              <el-dropdown-item><a href="#">关于我们</a></el-dropdown-item>
+              <el-dropdown-item><a href="#">联系我们</a></el-dropdown-item>
+            </el-dropdown-menu>
+          </el-dropdown>
+        </div>
       </div>
     </div>
   </div>
@@ -34,12 +47,14 @@
       .nav {
         width: 100%;
         text-align: center;
+        position: relative;
         .logo {
           margin: 0 auto;
           color: #fff;
           line-height: 60px;
         }
         .navbar {
+          display: none;
           height: 60px;
           float: right;
           .nav-item {
@@ -61,6 +76,13 @@
             }
           }
         }
+        .dropdown {
+          position: absolute;
+          line-height: 60px;
+          top: 0;
+          right: 20px;
+          display: block;
+        }
       }
     }
   }
@@ -71,6 +93,12 @@
         .nav {
           .logo {
             float: left;
+          }
+          .navbar {
+            display: block;
+          }
+          .dropdown {
+            display: none;
           }
         }
       }
