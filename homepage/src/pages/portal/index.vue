@@ -1,16 +1,25 @@
 <template>
   <div class="portal">
     <page-header></page-header>
+    <!-- banner -->
     <div class="banner">
-      <el-carousel :interval="5000" :height="carouselHeight" arrow="never" trigger="click">
+      <el-carousel :interval="3000" :height="carouselHeight"  trigger="click">
         <el-carousel-item v-for="banner in banners" :key="banner.bid">
           <img :src="banner.imageUrl" alt="banner">
         </el-carousel-item>
       </el-carousel>
     </div>
     <div class="globalWidth">
-    <!-- banner -->
-
+      <div class="intro">
+        <h2 class="intro-title">定制属于您的互联网服务</h2>
+        <p class="intro-content">
+          我是介绍文字我是介绍文字我是介绍文字我是介绍文字我是介绍文字我是介绍文字我是介绍文字我是介绍文字我是介绍文字我是介绍文字
+        </p>
+      </div>
+    <!-- figure -->
+      <el-row>
+        <el-col :xs="8" :sm="8"></el-col>
+      </el-row>
     </div>
   </div>
 </template>
@@ -72,11 +81,39 @@
         }
       }
     }
+    .globalWidth {
+      .intro {
+        padding: 0 10px;
+        width: 100%;
+        .intro-title {
+          font-size: 24px;
+          text-align: center;
+          color: #303133;
+          padding: 10px;
+        }
+        .intro-content {
+          font-size: 14px;
+          line-height: 1.5;
+          color: #606266;
+        }
+      }
+    }
   }
   @media screen and (min-width: 768px){
     .portal {
       .banner {
         height: 300px;
+      }
+      .globalWidth {
+        .intro {
+          padding: 20px 10px;
+          .intro-title {
+            font-size: 30px;
+          }
+          .intro-content {
+            font-size: 16px;
+          }
+        }
       }
     }
   }
