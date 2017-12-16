@@ -59,26 +59,28 @@
             </div>
           </el-col>
         </el-row>
-        <el-row :gutter="10">
-          <el-col :xs="12" :sm="6" v-for="item in service" :key="item.sid">
-            <div class="service">
-              <svg-icon :icon-class="item.icon"></svg-icon>
-              <h3 class="ser-title">{{ item.title }}</h3>
-              <h4 class="ser-subTitle">
-                {{ item.subtitle }}
-              </h4>
-              <ul class="ser-cont">
-                <li v-for="(cont, index) in item.content" :key="index">{{ cont }}</li>
-              </ul>
-            </div>
+        <el-row :gutter="figureGutter" class="case">
+          <el-col :xs="12" :sm="6" v-for="item in caseList" :key="item.cid">
+            <el-card :body-style="{ padding: '0px' }">
+              <img :src="item.imageUrl" class="image">
+              <div style="padding: 14px;">
+                <span>{{ item.title }}</span>
+                <div class="bottom clearfix">
+                  <!--<time class="time">{{ currentDate }}</time>-->
+                  <el-button type="text" class="button" @click="showMsg">查看详情</el-button>
+                </div>
+              </div>
+            </el-card>
           </el-col>
         </el-row>
       </div>
     </div>
+    <page-footer></page-footer>
   </div>
 </template>
 <script>
   import PageHeader from '../components/Header'
+  import PageFooter from '../components/Footer'
   export default {
     data() {
       return {
@@ -149,6 +151,48 @@
               '产品设计制作'
             ]
           }
+        ],
+        caseList: [
+          {
+            cid: 1,
+            imageUrl: 'static/images/case1.png',
+            title: '美食Lite'
+          },
+          {
+            cid: 2,
+            imageUrl: 'static/images/case2.png',
+            title: '预约洗车'
+          },
+          {
+            cid: 3,
+            imageUrl: 'static/images/case3.png',
+            title: '美容 造型 塑形'
+          },
+          {
+            cid: 4,
+            imageUrl: 'static/images/case4.png',
+            title: '健身Lite'
+          },
+          {
+            cid: 5,
+            imageUrl: 'static/images/case5.jpg',
+            title: '宜简家居'
+          },
+          {
+            cid: 6,
+            imageUrl: 'static/images/case6.png',
+            title: '服装Lite'
+          },
+          {
+            cid: 7,
+            imageUrl: 'static/images/case7.png',
+            title: '食客'
+          },
+          {
+            cid: 8,
+            imageUrl: 'static/images/case8.png',
+            title: '新闻资讯'
+          }
         ]
       }
     },
@@ -173,9 +217,16 @@
       }
     },
     components: {
-      PageHeader
+      PageHeader,
+      PageFooter
     },
     methods: {
+      showMsg() {
+        this.$message({
+          type: 'warning',
+          message: '即将上线，敬请期待'
+        })
+      }
     }
   }
 </script>
@@ -296,6 +347,37 @@
             color: #909399;
           }
         }
+        .case {
+          .time {
+            font-size: 13px;
+            color: #999;
+          }
+
+          .bottom {
+            margin-top: 13px;
+            line-height: 12px;
+          }
+
+          .button {
+            padding: 0;
+            float: right;
+          }
+
+          .image {
+            width: 100%;
+            display: block;
+          }
+          .el-card {
+            &:hover {
+              transition : all 0.2s ease 0s;
+              outline : rgb(51, 51, 51) dashed 0;
+              box-shadow : rgba(0, 0, 0, 0.3) 0 5px 40px 1px;
+            }
+          }
+          .el-col {
+            margin-bottom: 10px;
+          }
+        }
       }
     }
   }
@@ -342,6 +424,11 @@
             text-align: center;
             .svg-icon {
               font-size: 100px;
+            }
+          }
+          .case {
+            .el-col {
+              margin-bottom: 30px;
             }
           }
         }
