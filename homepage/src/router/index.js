@@ -27,7 +27,7 @@ export const constantRouterMap = [
     path: '/',
     component: Layout,
     redirect: '/dashboard',
-    name: 'Dashboard',
+    name: '后台首页',
     hidden: true,
     children: [{
       path: 'dashboard',
@@ -43,32 +43,32 @@ export const constantRouterMap = [
     component: Layout,
     redirect: '/example/table',
     name: 'Example',
-    meta: { title: 'Example', icon: 'example' },
+    // meta: { title: '文章管理', icon: 'example' },
     children: [
       {
         path: 'table',
         name: 'Table',
         component: _import('table/index'),
-        meta: { title: 'Table', icon: 'table' }
+        meta: { title: '文章管理', icon: 'table' }
       },
-      {
-        path: 'tree',
-        name: 'Tree',
-        component: _import('tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
-      }
+      // {
+      //   path: 'tree',
+      //   name: 'Tree',
+      //   component: _import('tree/index'),
+      //   meta: { title: 'Tree', icon: 'tree' }
+      // }
     ]
   },
 
   {
-    path: '/form',
+    path: '/banner',
     component: Layout,
     children: [
       {
         path: 'index',
         name: 'Form',
-        component: _import('form/index'),
-        meta: { title: 'Form', icon: 'form' }
+        component: _import('banner/index'),
+        meta: { title: 'banner管理', icon: 'form' }
       }
     ]
   },

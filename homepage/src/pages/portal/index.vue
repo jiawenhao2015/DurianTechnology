@@ -13,7 +13,7 @@
       <div class="intro">
         <h2 class="intro-title">定制属于您的互联网服务</h2>
         <p class="intro-content">
-          我是介绍文字我是介绍文字我是介绍文字我是介绍文字我是介绍文字我是介绍文字我是介绍文字我是介绍文字我是介绍文字我是介绍文字
+          {{ introduction }}
         </p>
       </div>
     <!-- figure -->
@@ -84,6 +84,7 @@
   export default {
     data() {
       return {
+        introduction: '私人定制互联网服务，只需要提供您的想法，我们将根据您的想法，基于互联网的特性，设计出种种解决方案，来解决您的需求。从逻辑逻辑设计到效果图设计，在不同的设备（PC、Pad、app）上都能完美显示，基于丰富的互联网资源（微信、小程序）进行推广。',
         banners: [
           {
             bid: 1,
@@ -328,19 +329,20 @@
         }
         .service {
           text-align: center;
-          margin-bottom: 10px;
+          margin-bottom: 30px;
           .svg-icon {
             font-size: 70px;
             color: #666666;
           }
           .ser-title {
-            margin: 10px 0;
+            margin: 10px 0 20px 0;
             font-size: 22px;
             font-weight: lighter;
           }
           .ser-subTitle {
             margin-bottom: 10px;
             color: #606266;
+            line-height: 1.5;
           }
           .ser-cont {
             line-height: 1.5;
