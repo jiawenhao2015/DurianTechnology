@@ -6,10 +6,10 @@
           <h1><a href="#">Durian Technology</a></h1>
         </div>
         <ul class="navbar">
-          <li class="nav-item"><a href="#">首页</a></li>
-          <li class="nav-item"><a href="#">业务范围</a></li>
-          <li class="nav-item"><a href="#">关于我们</a></li>
-          <li class="nav-item"><a href="#">联系我们</a></li>
+          <li class="nav-item"><a @click="goto('/portal')">首页</a></li>
+          <li class="nav-item"><a @click="goto('/service')">业务范围</a></li>
+          <li class="nav-item"><a @click="goto('/about')">关于我们</a></li>
+          <li class="nav-item"><a @click="goto('/contact')">联系我们</a></li>
         </ul>
         <div class="dropdown">
           <el-dropdown trigger="click">
@@ -34,7 +34,11 @@
       return {}
     },
     components: {},
-    methods: {}
+    methods: {
+      goto(path) {
+        this.$router.push(path)
+      }
+    }
   }
 </script>
 <style rel="stylesheet/scss" lang="scss" scoped>

@@ -222,6 +222,9 @@
       PageFooter
     },
     methods: {
+      goto(path) {
+        this.$router.push(path)
+      },
       showMsg() {
         this.$message({
           type: 'warning',

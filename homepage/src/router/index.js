@@ -9,6 +9,9 @@ Vue.use(Router)
 /* Layout */
 import Layout from '../views/layout/Layout'
 import portal from '../pages/portal/index'
+import about from '../pages/about/index'
+import service from '../pages/service/index'
+import contact from '../pages/contact/index'
 
 /**
 * hidden: true                   if `hidden:true` will not show in the sidebar(default is false)
@@ -37,6 +40,18 @@ export const constantRouterMap = [
   {
     path: '/portal',
     component: portal
+  },
+  {
+    path: '/about',
+    component: about
+  },
+  {
+    path: '/service',
+    component: service
+  },
+  {
+    path: '/contact',
+    component: contact
   },
   {
     path: '/example',
