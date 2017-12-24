@@ -17,10 +17,10 @@
               <svg-icon icon-class="menu" style="font-size: 20px;"></svg-icon>
             </span>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item><a href="#">首页</a></el-dropdown-item>
-              <el-dropdown-item><a href="#">业务范围</a></el-dropdown-item>
-              <el-dropdown-item><a href="#">关于我们</a></el-dropdown-item>
-              <el-dropdown-item><a href="#">联系我们</a></el-dropdown-item>
+              <el-dropdown-item><a @click="goto('/portal')">首页</a></el-dropdown-item>
+              <el-dropdown-item><a @click="goto('/service')">业务范围</a></el-dropdown-item>
+              <el-dropdown-item><a @click="goto('/about')">关于我们</a></el-dropdown-item>
+              <el-dropdown-item><a @click="goto('/contact')">联系我们</a></el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
         </div>
