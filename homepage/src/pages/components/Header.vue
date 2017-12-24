@@ -3,7 +3,7 @@
     <div class="nav_wrapper">
       <div class="nav">
         <div class="logo">
-          <h1><a href="#">Durian Technology</a></h1>
+          <h1><a @click="goto('/portal')">Durian Technology</a></h1>
         </div>
         <ul class="navbar">
           <li class="nav-item"><a @click="goto('/portal')">首页</a></li>

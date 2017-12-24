@@ -88,20 +88,20 @@
         banners: [
           {
             bid: 1,
-            imageUrl: 'static/images/banner.png'
-          },
-          {
-            bid: 2,
             imageUrl: 'static/images/banner1.png'
           },
           {
-            bid: 3,
+            bid: 2,
             imageUrl: 'static/images/banner2.png'
           },
           {
-            bid: 4,
+            bid: 3,
             imageUrl: 'static/images/banner3.png'
-          }
+          },
+          {
+            bid: 4,
+            imageUrl: 'static/images/banner.png'
+          },
         ],
         service: [
           {
